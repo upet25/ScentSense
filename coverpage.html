@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ScentSense</title>
+    <link rel="stylesheet" href="welcome.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <div class="cover-page">
+        <div class="logo">
+            <img src="logo.png" alt="ScentSense Logo">
+        </div>
+        
+        <div class="main-content">
+            <div class="text-content">
+                <h1><span class="highlight">Scent Sense</span></h1>
+                    <h2> <span class="white-text">Where</span> <span class="bottle"> Essence </span> 
+                        <span class="white-text"> meets </span> 
+                        <span class="bottle">Elegance</span></h2> <br>
+                <p>Discover the secrets of our timeless designs where the exquisite <br> 
+                 marriage of form and fragrance elevates each bottle into a work of art.</p>
+                <button class="view-products" onclick="showTerms()">Find My Scent</button>
+            </div>
+
+            <div class="perfume-display">
+                <img src="bottle.png" alt="Luxury Perfume Bottle" class="perfume-bottle">
+            </div>
+
+            <div class="stats">
+                <div class="stat-item">
+                    <span class="number">100k+</span>
+                    <span class="label">Trusted Clients</span>
+                </div>
+                <div class="stat-item">
+                    <span class="number">80K+</span>
+                    <span class="label">Luxury Perfume</span>
+                </div>
+                <div class="stat-item">
+                    <span class="number">10Y+</span>
+                    <span class="label">Caring Best Service</span>
+                </div>
+            </div>
+
+            <div class="crown-icons">
+                <div class="crown-container">
+                    <span class="crown">👑</span>
+                    <span class="crown">👑</span>
+                    <span class="crown">👑</span>
+                </div>
+                <div class="explore-button">
+                    <button class="explore">Explore Luxury</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Terms Modal -->
+    <div id="termsModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <img src="logo.png" alt="ScentSense Logo" class="modal-logo">
+                <h2 id="modalTitle">Terms & Conditions</h2>
+                <span class="close-btn">&times;</span>
+            </div>
+
+            <div class="modal-pages">
+                <!-- Page 1: Terms & Conditions -->
+                <div class="modal-page" id="page1">
+                    <p class="instructions">Please read the following important information before continuing.</p>
+                    
+                    <div class="terms-text">
+                        <p>Welcome to ScentSense! By accessing or using our website, you agree to these Terms and Conditions. Our platform serves as an affiliate website that advertises perfumes, providing information about their scents, ingredients, and user reviews. By using our services, you acknowledge that the information provided is for reference purposes only and may be subject to change. We reserve the right to modify these terms at any time, and continued use of the website constitutes your acceptance of the updated terms.</p>
+
+                        <p>To enhance your experience, we may collect certain data, including your name, email address, browsing behavior, and site interactions. This information is used to personalize recommendations, improve website functionality, and provide promotional content (with your consent). We implement strict security measures to protect your data and do not sell or share personal information with third parties, except when necessary for legal compliance, affiliate marketing, or essential site functions. Additionally, our website uses cookies to track usage patterns and improve performance, and by continuing to browse, you agree to our cookie policy.</p>
+
+                        <p>Users of ScentSense are expected to act responsibly and ethically while engaging with our platform. Any form of misuse, including attempting to manipulate reviews, engaging in fraudulent activities, or attempting to breach the security of the website, will result in immediate restrictions or account termination. Furthermore, all content, including perfume descriptions, images, and user-generated reviews, remains the intellectual property of our platform or respective licensors, and unauthorized reproduction or distribution is strictly prohibited.</p>
+
+                        <p>We are committed to complying with relevant data privacy laws, including the General Data Protection Regulation (GDPR) for EU users, the California Consumer Privacy Act (CCPA) for California residents, and the Data Privacy Act of 2012 for users in the Philippines. By using our website, you consent to the collection, processing, and storage of your data in accordance with these regulations. While we strive to provide accurate and reliable information, we do not guarantee the completeness or correctness of all content, and we are not liable for any losses or damages resulting from reliance on the information provided. If you have any questions or concerns regarding these terms, please contact us at <a href="mailto:scentsensesupport@gmail.com">scentsensesupport@gmail.com</a>.</p>
+                    </div>
+
+                    <div class="agreement-options">
+                        <label class="radio-option">
+                            <input type="radio" name="agreement" value="accept">
+                            <span>I accept the agreement</span>
+                        </label>
+                        <label class="radio-option">
+                            <input type="radio" name="agreement" value="decline" checked>
+                            <span>I do not accept the agreement</span>
+                        </label>
+                    </div>
+
+                    <div class="modal-buttons">
+                        <button class="cancel-btn" onclick="closeModal()">Cancel</button>
+                        <button class="next-btn" onclick="showPage(2)" disabled>Next ></button>
+                    </div>
+                </div>
+
+                <!-- Page 2: Disclaimer -->
+                <div class="modal-page" id="page2" style="display: none;">
+                    <div class="terms-text">
+                        <p>ScentSense is a school project for educational purposes only and is not affiliated with any perfume brands mentioned. All trademarks, logos, and product images belong to their respective owners and are used for illustrative purposes. This site does not conduct real transactions, and all affiliate links and ads are fictional. By using this website, you acknowledge that its content is for academic demonstration only, and ScentSense is not responsible for any misinterpretations or consequences.</p>
+                    </div>
+                    
+                    <div class="modal-buttons">
+                        <button class="back-btn" onclick="showPage(1)">< Back</button>
+                        <button class="understand-btn" onclick="acceptTerms()">I Understand</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
